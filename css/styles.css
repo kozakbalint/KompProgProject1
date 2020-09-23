@@ -1,0 +1,11 @@
+body
+{
+    background-color: #e8e0dc;
+}
+
+.customBorderCss
+{
+   width: 800px;
+   margin: 30px auto;
+   background-color: rgba(235, 102, 49, 0.5);
+}
