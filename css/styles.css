@@ -1,6 +1,11 @@
-body
+body, html
 {
-    background-color: greenyellow;
+    height: 100%;
+    background-image: url("background.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .customBorderCss
