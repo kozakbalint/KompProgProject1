@@ -43,5 +43,13 @@ body, html
 
 form
 {
+    margin: auto;
+    width: 20em;
     color: black;
+}
+
+h1
+{
+    color: black;
+    text-align: center;
 }
