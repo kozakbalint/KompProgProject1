@@ -40,3 +40,8 @@ body, html
 
     filter: blur(8px); 
 }
+
+form
+{
+    color: black;
+}
