@@ -8,6 +8,41 @@
     <title>Hálózatszámítás</title>
 </head>
 <body>
-    
+    <form class="form-horizontal">
+        <label class="col-form-label" for="network">IP cím</label>
+        <input class="form-control" type="text" id="network">
+        <label class="col-form-label" for="mask">Alhálózati maszk</label>
+        <input class="form-control" type="text" id="mask">
+        <select class="form-control" id="maskSelect">
+            <option value="255.255.255.0">255.255.255.0</option>
+            <option value="255.255.255.128">255.255.255.128</option>
+            <option value="255.255.255.192">255.255.255.192</option>
+            <option value="255.255.255.224">255.255.255.224</option>
+            <option value="255.255.255.240">255.255.255.240</option>
+            <option value="255.255.255.248">255.255.255.248</option>
+            <option value="255.255.255.252">255.255.255.252</option>    
+        </select>
+        <label class="col-form-label" for="prefix">Prefix</label>
+        <input class="form-control" type="text" id="prefix" readonly>
+        <label class="col-form-label" for="hosts">Hostok száma</label>
+        <input class="form-control" type="text" id="hosts" readonly>
+        <select class="form-control" id="hostsSelect">
+            <option value="24">254</option>
+            <option value="25">126</option>
+            <option value="26">62</option>
+            <option value="27">30</option>
+            <option value="28">14</option>
+            <option value="29">6</option>
+            <option value="30">2</option>
+        </select>
+        <label class="col-form-label" for="first">Hálózatcím</label>
+        <input class="form-control" type="text" id="first" readonly>
+        <label class="col-form-label" for="broadcast">Broadcast cím</label>
+        <input class="form-control" type="text" id="broadcast" readonly>
+        <label class="col-form-label" for="firstU">Első használható cím</label>
+        <input class="form-control" type="text" id="firstU" readonly>
+        <label class="col-form-label" for="lastU">Utolsó használható cím</label>
+        <input class="form-control" type="text" id="lastU" readonly>
+    </form>
 </body>
 </html>
