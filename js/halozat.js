@@ -115,3 +115,49 @@ function decimalToOctet(d){
                         );
     return a;
 }
+
+//Kiszámolja a prefixből a maszkot
+function prefixToOctet(bits) {
+    var bits = parseInt(bits);
+    if( bits < 0 | bits > 32 ) {
+        return false;
+    }
+    var ones = "11111111111111111111111111111111";
+    var mask = parseInt(ones.substring(0,bits),2);
+    var shift = 32-bits;
+    mask = mask * Math.pow(2,shift);
+
+    return decimalToOctet(mask);
+}
+
+//Alhálózati maszk input és dropdown onchange event
+function calculateSubnet(mask) {
+    var a = mask.split('.');
+    tmpMask[0] = parseInt(a[0]);
+    tmpMask[1] = parseInt(a[1]);
+    tmpMask[2] = parseInt(a[2]);
+    tmpMask[3] = parseInt(a[3]);
+    displayData();
+}
+
+//Hostok dropdown onchange event
+function calculateHosts(prefix) {
+    tmpMask = prefixToOctet(prefix);
+    displayData();
+}
+
+//IP input onchange event
+function calculateIP(ip) {
+    var ipa = ip.split('/');
+    if( ipa.length == 2 ) {
+        var a = ipa[0].split('.');
+        tmpAddr[0] = parseInt(a[0]);
+        tmpAddr[1] = parseInt(a[1]);
+        tmpAddr[2] = parseInt(a[2]);
+        tmpAddr[3] = parseInt(a[3]);
+        tmpMask = prefixToOctet(ipa[1]);
+    } else {
+        tmpAddr = ip.split('.');
+    }
+    displayData();
+}
