@@ -65,6 +65,24 @@ function broadcast(arrAddr, wildcard){
     return a 
 }
 
+//Kiszámolja az első használható IP címet
+function firstUseableIp(arrAddr, arrMask){
+    var a = firstIp(arrAddr,arrMask)
+    var d = octetToDecimal(a)
+    //Hálózat címhez hozzáadok egyet.
+    d = d + 1
+    return decimalToOctet(d)
+}
+
+//Kiszámolja az utolsó használható IP címet
+function lastUseableIp(arrAddr, wildcard){
+    var a = new broadcast(arrAddr,wildcard)
+    var d = octetToDecimal(a)
+    //A broadcast címből elvesz egyet
+    d = d-1
+    return decimalToOctet(d) 
+}
+
 //Átalakítja a 4 octetet decimális számmá
 function octetToDecimal(a){
     var d = 0;
@@ -83,4 +101,17 @@ function octetToPrefix(arrMask){
     mask = mask.toString(2)
     //visszatér a maszk hosszával 
     return mask.indexOf(0) 
+}
+
+//Átalakítja a decimális számot 4 octetté
+function decimalToOctet(d){
+    var bits = "00000000000000000000000000000000"
+    var b = d.toString(2)
+    var b = bits.substring(0,32-b.length) + b
+    var a = new Array(parseInt(b.substring(0,8),2)
+                        , (d & 16711680)/65536	  
+                        , (d & 65280)/256		 
+                        , (d & 255)
+                        );
+    return a;
 }
