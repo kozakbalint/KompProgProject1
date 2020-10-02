@@ -55,6 +55,16 @@ function wildCard(arrMask){
     return a
 }
 
+//A broadcast címet számolja ki az IP címből és a Wild Cardból 
+function broadcast(arrAddr, wildcard){
+    var a = new Array(0,0,0,0)
+    for(var i = 0; i < 4; i++){
+        //Bitwise OR művelet
+        a[i] = arrAddr[i] | wildcard[i] 
+    }
+    return a 
+}
+
 //Átalakítja a 4 octetet decimális számmá
 function octetToDecimal(a){
     var d = 0;
