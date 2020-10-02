@@ -29,3 +29,12 @@ function displayData(){
     var lastUIp = lastUseableIp(tmpAddr,wc)
     document.getElementById("lastU").value = lastUIp[0] + "." + lastUIp[1] + "." + lastUIp[2] + "." + lastUIp[3]
 }
+
+//Kiszámolja a maszkból a prefixet (hálózat biteket).
+function octetToPrefix(arrMask){
+    var mask = octetToDecimal(arrMask)
+    //átalakítja binárissá
+    mask = mask.toString(2)
+    //visszatér a maszk hosszával 
+    return mask.indexOf(0) 
+}
