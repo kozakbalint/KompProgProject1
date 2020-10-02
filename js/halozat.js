@@ -36,6 +36,25 @@ function hostsCount(arrMask) {
     return Math.pow(2,bits) -2; //visszatér a hálózatban lévő címek számával-2 (-2 => broadcast, network) 
 }
 
+//Kiszámolja a Ip címből és a maszkból a hálózatcímet
+function firstIp(arrAddr, arrMask){
+    var a = new Array(0,0,0,0)
+    for (var i = 0; i < 4; i++) {
+        //Bitwise AND művelet
+        a[i] = arrAddr[i] & arrMask[i]
+    }
+    return a
+}
+
+//Kiszámolja a maskból a wildcard maskot
+function wildCard(arrMask){
+    var a = new Array(0,0,0,0)
+    for (var i = 0; i < 4; i++) {
+        a[i] = 255 - arrMask[i]
+    }
+    return a
+}
+
 //Átalakítja a 4 octetet decimális számmá
 function octetToDecimal(a){
     var d = 0;
