@@ -12,7 +12,7 @@ function displayData(){
     var prefix = octetToPrefix(tmpMask)
     document.getElementById("prefix").value = prefix
     //Hostcímek száma
-    var numOfHosts = hostCount(tmpMask)
+    var numOfHosts = hostsCount(tmpMask)
     document.getElementById("hosts").value = numOfHosts
     //Legelső IP cím (hálózatcím)
     var netIp = firstIp(tmpAddr,tmpMask)
@@ -28,6 +28,23 @@ function displayData(){
     //Utolsó használható IP cím
     var lastUIp = lastUseableIp(tmpAddr,wc)
     document.getElementById("lastU").value = lastUIp[0] + "." + lastUIp[1] + "." + lastUIp[2] + "." + lastUIp[3]
+}
+
+//A hostok számát adja meg.
+function hostsCount(arrMask) {
+    var bits = 32 - octetToPrefix(arrMask);
+    return Math.pow(2,bits) -2; //visszatér a hálózatban lévő címek számával-2 (-2 => broadcast, network) 
+}
+
+//Átalakítja a 4 octetet decimális számmá
+function octetToDecimal(a){
+    var d = 0;
+    d = d + parseInt(a[0]) * Math.pow(2,24)
+    d = d + a[1] * Math.pow(2,16)
+    d = d + a[2] * Math.pow(2,8)
+    d = d + a[3]
+    //visszatér a decimális számmal
+    return d
 }
 
 //Kiszámolja a maszkból a prefixet (hálózat biteket).
