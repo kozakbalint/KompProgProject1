@@ -1,8 +1,5 @@
 body, html
 {
-<<<<<<< HEAD
-    
-=======
     color: white;
     height: 100%;
 }
@@ -10,7 +7,6 @@ body, html
 h1, h3
 {
     color: white;
->>>>>>> be52f3a011a4de287a14a101e32daed08d9e660f
 }
 
 .customBorderCss
@@ -20,7 +16,6 @@ h1, h3
    background-color: rgba(235, 102, 49, 0.5);
 }
 
-<<<<<<< HEAD
 .card
 {
     background-color: rgba(255,255,255,0.5);
@@ -40,8 +35,7 @@ h1, h3
     background-size: auto;
     background-attachment: fixed;
     margin: 8%;
-    
-=======
+} 
 .bg-text
 {
     background-color: rgb(0,0,0);
@@ -86,5 +80,4 @@ form
 {
     color: black;
     text-align: center;
->>>>>>> be52f3a011a4de287a14a101e32daed08d9e660f
 }
