@@ -8,6 +8,81 @@
     <title>Hálózatszámítás</title>
 </head>
 <body>
-    
+    <h1 class="form">Hálózatszámítás</h1>
+    <div class="col-sm-8 center-div">
+        <form class="form-horizontal">
+            <div class="form-group row">
+                <label class="col-form-label col-sm-3" for="network">IP cím</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" id="network" onchange="calculateIP(this.value)">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-sm-3" for="mask">Alhálózati maszk</label>
+                <div class="col-sm-5">
+                    <input class="form-control" type="text" id="mask" calculateSubnet(this.value)">
+                </div>
+                <div class="col-sm-4">
+                    <select class="form-control" id="maskSelect" onchange="calculateSubnet(this.options[this.selectedIndex].value)">
+                        <option value="255.255.255.0">255.255.255.0</option>
+                        <option value="255.255.255.128">255.255.255.128</option>
+                        <option value="255.255.255.192">255.255.255.192</option>
+                        <option value="255.255.255.224">255.255.255.224</option>
+                        <option value="255.255.255.240">255.255.255.240</option>
+                        <option value="255.255.255.248">255.255.255.248</option>
+                        <option value="255.255.255.252">255.255.255.252</option>    
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-sm-3" for="prefix">Prefix</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" id="prefix" readonly>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-sm-3" for="hosts">Hostok száma</label>
+                <div class="col-sm-5">
+                    <input class="form-control" type="text" id="hosts" readonly>
+                </div>
+                <div class="col-sm-4">
+                    <select class="form-control" id="hostsSelect" onchange="calculateHosts(this.options[this.selectedIndex].value)">
+                        <option value="24">254</option>
+                        <option value="25">126</option>
+                        <option value="26">62</option>
+                        <option value="27">30</option>
+                        <option value="28">14</option>
+                        <option value="29">6</option>
+                        <option value="30">2</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-sm-3" for="first">Hálózatcím</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" id="first" readonly>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-sm-3" for="broadcast">Broadcast cím</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" id="broadcast" readonly>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-sm-3" for="firstU">Első használható cím</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" id="firstU" readonly>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-form-label col-sm-3" for="lastU">Utolsó használható cím</label>
+                <div class="col-sm-9">
+                    <input class="form-control" type="text" id="lastU" readonly>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="js/halozat.js"></script>
 </body>
 </html>

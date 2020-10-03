@@ -1,6 +1,16 @@
-body
+body, html
 {
+<<<<<<< HEAD
     
+=======
+    color: white;
+    height: 100%;
+}
+
+h1, h3
+{
+    color: white;
+>>>>>>> be52f3a011a4de287a14a101e32daed08d9e660f
 }
 
 .customBorderCss
@@ -10,6 +20,7 @@ body
    background-color: rgba(235, 102, 49, 0.5);
 }
 
+<<<<<<< HEAD
 .card
 {
     background-color: rgba(255,255,255,0.5);
@@ -30,4 +41,50 @@ body
     background-attachment: fixed;
     margin: 8%;
     
+=======
+.bg-text
+{
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.mainImage
+{
+    background-image: url("background.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 100%;
+
+    filter: blur(8px); 
+}
+
+.center-div{
+    margin: 0 auto;
+    width: 80%;
+}
+
+form
+{
+    color: black;
+}
+
+.form
+{
+    color: black;
+    text-align: center;
+>>>>>>> be52f3a011a4de287a14a101e32daed08d9e660f
 }
