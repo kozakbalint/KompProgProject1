@@ -6,14 +6,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Programozási tételek</title>
-</head>
-<body class="prog-body ">
+</head>     
+<body class="prog-body">
     <div class="row">
-        <div class="col-sm-6">
+        <div class="col-sm-12 col-md-6 col-xl-4 card-wrapper">
           <div class="card mt-5">
             <div class="card-body">
-              <h5 class="card-title">1) Összegzés tétele:</h5>
-              <p class="card-text">
+              <h5 class="card-title text-dark">1) Összegzés tétele:</h5>
+              <h6 class="text-info">Egy tömb összes elemét összeadja</h6>
+              <p class="card-text text-body">
                 Algoritmus összegzés</br>
 
                 t(n) S=0 Ciklus i=0-tól n-1-ig</br>
@@ -24,155 +25,259 @@
     
                 Algoritmus vége
               </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-12 col-md-6 col-xl-4 card-wrapper">
         <div class="card mt-5">
             <div class="card-body">
-              <h5 class="card-title">2) Megszámlálás tétele:</h5>
-              <p class="card-text">
-                Egy adott n elemű tömbben megszámolja,
+              <h5 class="card-title text-dark">2) Megszámlálás tétele:</h5>
+              <h6 class="text-info">Egy adott n elemű tömbben megszámolja,hogy mennyi adott tulajdonságú elem van.</h6>
+              <p class="card-text text-body">
 
-            hogy mennyi adott tulajdonságú elem van.
+            T(elem): Az elem teljesíti az adott tulajdonságot.</br>
             
-            T(elem): Az elem teljesíti az adott tulajdonságot.
+            Algoritmus Megszámlálás</br>
             
-            Algoritmus Megszámlálás
+            t(n)</br>
             
-            t(n)
+            db=0</br>
             
-            db=0
+            Ciklus i=0-tól n-1-ig</br>
             
-            Ciklus i=0-tól n-1-ig
+            Ha T(t[i]) akkor Példa tulajdonságra t[i]%2==0</br>
             
-            Ha T(t[i]) akkor Példa tulajdonságra t[i]%2==0
+            db++</br>
             
-            db++
+            Elágazás vége</br>
             
-            Elágazás vége
+            Ciklus vége</br>
             
-            Ciklus vége
-            
-            Algoritmus vége
+            Algoritmus vége</br>
               </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-12 col-md-6 col-xl-4 card-wrapper">
             <div class="card mt-5 ">
               <div class="card-body">
-                <h5 class="card-title">3) Eldöntés tétele:</h5>
-                <p class="card-text">
-                    Egy n elemű tömbben eldönti, hogy van-e adott tulajdonságú elem
+                <h5 class="card-title text-dark">3) Eldöntés tétele:</h5>
+                <p class="card-text text-body">
+                    Egy n elemű tömbben eldönti, hogy van-e adott tulajdonságú elem</br>
 
-                Algoritmus Eldöntés
-
-                t(n)
-
-                i=0
-
-                Ciklus amíg i(n && !T(t[i]) t[i])3
-
-                i++
-
-                Ciklus vége
-
-                van=(i<\n)
-                Ha van akkor
-
-                Ki: „Van ilyen elem a tömbben”
-
-                Különben
-
-                Ki: „Nincs ilyen elem a tömbben”
-
-                Algoritmus vége
+                    Algoritmus Eldöntés</br>
+    
+                    t(n)</br>
+    
+                    i=0</br>
+    
+                    Ciklus amíg i(n && !T(t[i]) t[i])3</br>
+    
+                    i++</br>
+    
+                    Ciklus vége</br>
+    
+                    van=(i<\n)</br>
+                    Ha van akkor</br>
+    
+                    Ki: „Van ilyen elem a tömbben”</br>
+    
+                    Különben</br>
+    
+                    Ki: „Nincs ilyen elem a tömbben”</br>
+    
+                    Algoritmus vége</br>
+                </p>
                 
-        </div>
-    </div>
-    <div class="card  col-sm-6 col-xl-4">
-        <div class="card-body">
-             <h4 class="card-title"> 4) Kiválasztás tétele:</h4>
-              Adott egy n elemű tömb. Válasszuk ki az első olyan elemet, amely teljesíti a T tulajdonságot!
-
-            Algoritmus Kiválasztás
-
-            t(n)
-
-            i=0
-
-            Ciklus amíg !T(t[i])
-
-            i++
-
-            Ciklus vége
-
-            sorszám=i
-
-            Algoritmus vége
-                </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-12 col-md-6 col-xl-4 card-wrapper">
           <div class="card mt-5">
               <div class="card-body">
-                <h5 class="card-title">4) Kiválasztás tétele:</h5>
-                <p class="card-text">
+                <h5 class="card-title text-dark">4) Kiválasztás tétele:</h5>
+                <p class="card-text text-body">
+                    Adott egy n elemű tömb. Válasszuk ki az első olyan elemet, amely teljesíti a T tulajdonságot!</br>
 
+            Algoritmus Kiválasztás</br>
+
+            t(n)</br>
+
+            i=0</br>
+
+            Ciklus amíg !T(t[i])</br>
+
+            i++</br>
+
+            Ciklus vége</br>
+
+            sorszám=i</br>
+
+            Algoritmus vége</br>
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                
               </div>
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-12 col-md-6 col-xl-4 card-wrapper">
             <div class="card  mt-5">
               <div class="card-body">
-                <h5 class="card-title">5) Lineáris keresés tétele:</h5>
-                <p class="card-text">
+                <h5 class="card-title text-dark">5) Lineáris keresés tétele:</h5>
+                <p class="card-text text-body">
+                    Adott egy n elemű tömb. Keressük meg a tömb azon első elemét, amelyre teljesül a T tulajdonság. Ha nincs ilyen tulajdonságú elem, akkor írjuk ki, hogy nincs ilyen elem!</br>
 
+            Algoritmus Lineáris_keresés</br>
+
+            t(n)</br>
+
+            i=0</br>
+
+            Ciklus amíg i<\n && !T(t[i])</br>
+
+            i++</br>
+
+            Ciklus vége</br>
+
+            van=(i<\n)</br>
+
+            Ha van akkor</br>
+
+            sorszám=i</br>
+
+            Különben</br>
+
+            Ki: „Nincs ilyen elem.”</br>
+
+            Elágazás vége</br>
+
+            Algoritmus vége</br>
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                
               </div>
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-12 col-md-6 col-xl-4 card-wrapper">
           <div class="card mt-5">
               <div class="card-body">
-                <h5 class="card-title">6. Bináris keresés tétele:</h5>
-                <p class="card-text">
+                <h5 class="card-title text-dark">6. Bináris keresés tétele:</h5>
+                <p class="card-text text-body">
+                    Rendezett tömbben való keresés.</br>
 
+                    1 5 10 18 20 25 30</br>
+        
+                    Algoritmus Bináris_keresés</br>
+        
+                    t(n)</br>
+        
+                    Be: x (Keresendő elem)</br>
+        
+                    Rendez(t) (Növekvő sorrend)</br>
+        
+                    alsó=0</br>
+        
+                    felső=n-1</br>
+        
+                    Ciklus</br>
+        
+                    közép=(alsó+felső)/2</br>
+        
+                    Ha t[közép]<\x</br>
+        
+                    alsó=közép+1</br>
+        
+                    Elágazás vége</br>
+        
+                    Ha t[közép]>x</br>
+        
+                    felső=közép-1</br>
+        
+                    Elágazás vége</br>
+        
+                    amíg alsó<\=felső && t[közép]!=x</br>
+        
+                    van=(alsó<\=felső)</br>
+        
+                    Ha van akkor</br>
+        
+                    Ki: közép</br>
+        
+                    Elágazás vége</br>
+        
+                    Algoritmus vége</br>
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                
               </div>
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-12 col-md-6 col-xl-4 card-wrapper">
             <div class="card  mt-5">
               <div class="card-body">
-                <h5 class="card-title">7) Minimum kiválasztás (és maximum kiválasztás) tétele</h5>
-                <p class="card-text">
+                <h5 class="card-title text-dark">7) Minimum kiválasztás (és maximum kiválasztás) tétele</h5>
+                <p class="card-text text-body">
+                    Egy tömbben kiválasztja a legkisebb (vagy legnagyobb) elem indexét.</br>
 
+                    Ha több ilyen is van, akkor a legelső ilyen elemet választja ki.</br>
+        
+                    Algoritmus Minimum</br>
+        
+                    t(n)</br>
+        
+                    min=0</br>
+        
+                    Ciklus i=1-től n-1-ig</br>
+        
+                    Ha t[i]<\t[min]</br>
+        
+                    min=i</br>
+        
+                    Elágazás vége</br>
+        
+                    Ciklus vége</br>
+        
+                    Ki: min (érték: t[min])</br>
+        
+                    Algoritmus vége</br>
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                
               </div>
             </div>
           </div>
-          <div class="col-sm-6">
+          <div class="col-sm-12 col-md-6 col-xl-4 card-wrapper">
           <div class="card  mt-5">
               <div class="card-body">
-                <h5 class="card-title">8) Kiválogatás tétele:</h5>
-                <p class="card-text">
+                <h5 class="card-title text-dark">8) Kiválogatás tétele:</h5>
+                <p class="card-text text-body">
+                    Adva van egy tömb, és ebből adott tulajdonságú elemeket egy másik tömbbe átteszünk.</br>
 
+            Algoritmus kiválogatás</br>
+
+            t(n) -> Adott tömb</br>
+
+            t2(n) -> Üres tömb, amibe az új elemek kerülnek</br>
+
+            k=0</br>
+
+            Ciklus i=0-tól n-1-ig</br>
+
+            Ha T(t[i]) akkor</br>
+
+            t2[k]=t[i]</br>
+
+            k++</br>
+
+            Elágazás vége</br>
+
+            Ciklus vége</br>
+
+            Algoritmus vége</br>
                 </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                
               </div>
             </div>
           </div>
     </div>
+
 </body>
 </html>
