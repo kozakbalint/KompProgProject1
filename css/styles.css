@@ -18,16 +18,22 @@ h1, h3
 
 .card
 {
-    background-color: rgba(255,255,255,0.5);
-    border-radius: 10%;
-    padding: 1%;
+    background-color: rgba(255,255,255,0.75);
+    height: 100%;
     
 }
 
-.card-body
+.card-wrapper
 {
-    padding: 10%;
+    margin-bottom: 5%;
 }
+
+.card-text
+{
+    line-height: 200%;
+    font-size: large;
+}
+
 
 .prog-body
 {
@@ -35,6 +41,7 @@ h1, h3
     background-size: auto;
     background-attachment: fixed;
     margin: 8%;
+    
 } 
 .bg-text
 {
