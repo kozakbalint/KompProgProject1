@@ -73,9 +73,33 @@ h1, h3
     filter: blur(8px); 
 }
 
+.halozat-image::before
+{
+    content: "";
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    display: block;
+    background-image: url('halozat_bg.jpg');
+    background-size:cover;
+    width: 100%;
+    height: 100%;
+
+    filter: blur(8px);
+}
+
 .center-div{
-    margin: 0 auto;
-    width: 80%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    width: 70%;
+    background-color: rgba(255,255,255,0.75);
+    border-radius: 5px;
+}
+
+.br{
+    height: 5em;
 }
 
 form
