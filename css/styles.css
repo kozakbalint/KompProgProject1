@@ -139,3 +139,20 @@ a :hover
 {
     color: black;
 }
+
+.footerClass
+{
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    z-index: 1;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+}
