@@ -18,9 +18,14 @@ h1, h3
 
 .card
 {
+    background-color: rgba(0,0,0, 0);
+    border-color: white;
+}
+
+.cardHalozat
+{
     background-color: rgba(255,255,255,0.75);
     height: 100%;
-    
 }
 
 .card-wrapper
@@ -111,4 +116,26 @@ form
 {
     color: black;
     text-align: center;
+}
+
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+a :hover
+{
+    color: blue;
+    text-decoration: none;
+}
+
+.colorBlack
+{
+    color: black
+}
+
+.colorBlack :hover
+{
+    color: black;
 }
