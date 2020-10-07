@@ -102,13 +102,43 @@
             </div>
         </form>
     </div>
-    <div class="borderDescription coloring">
-        <h1 class="coloring">Magyarázat</h1>
+    <div class="col-sm-8 borderDescription coloring">
+        <h1 class="coloring text-center">Magyarázat</h1>
         <p>Ez a számoló egyelőre <b>CSAK</b> "C" osztályú ip címekkel működik.</p>
         <p>Vegyünk példának egy alap hálózatot /24-es prefixel.<br>
-            Az első 24 bit azaz az első 3 octet a hálózatazonosító, ezt SOSEM tudjuk megváltoztatni.<br>
-            
+            Az első 24 bit azaz az első 3 octet a hálózatazonosító, ezt SOSEM tudjuk megváltoztatni,<br>
+            tehát csak a hostbitekből tudunk elvenni.<br>
+            Lépések: 
+            <ul>
+                <li>1. decimális megvizsgálás: Felírjuk a hostbiteket decimális alakban</li>
+                <li>2. megnézzük mennyi alhálózat fog kelleni és ahhoz képest leválasztjuk a hostbiteket</li>
+                <li>3. Meghatározzuk az alhálózatokhoz tartozó alhálózati maskot, prefixet</li>
+                <li>4. Megnézzük a broadcast címet</li>
+                <li>5. Megnézzük az első és utolsó kiosztható ip címet</li>
+            </ul>
         </p>
+        <pre>
+            Példa feladat:
+            Osszuk 4 egyenlő alhálózatra az alábbi ip címmel ellátott hálózatot: 192.168.0.1/24.
+
+            1. lépés: 192.168.0.|00000000
+                        network | hostbits
+            2. lépés: Balról jobbra kezdjük a számolást, az 1. bit 2 hálózatra oszt mert 2^1 = 2.
+                    A 2. bit már 2^2 tehát 4 hálózat, ez meg is felel nekünk.
+            3. lépés: Mivel tudjuk, hogy az első 2 hostbit lesz a megfelelő, ezért 24 + 2 = 26, tehát /26-os lesz a hálózatunk
+                            2^8  2^7  2^6  2^5  2^4  2^3  2^2  2^1
+                            128  64   32   16   8    4    2    1
+                             0    0    0    0   0    0    0    0
+                        jobbról balra kell az utolsó 2 bitet összeadni,
+                        tehát: 128 + 64 = 192
+                        így az subnet mask utolsó octet-jét helyettesítjük a megkapott számmal és ezt kapjuk: 255.255.255.192
+            
+            4. lépés: broadcast cím = következő hál. cím -1 = 
+                        192.168.0.64 - 1 = 192.168.0.63
+            5. lépés: első és utolsó kiosztható ip: hálózatcím + 1 tehát / broadcast cím - 1
+                        1. hál.: első: 192.168.0.0 + 1 = 192.168.0.1
+                                 utolsó: 192.168.0.63 - 1 = 192.168.0.62
+                                 És így tovább az összes többinél, 64-el emelkedik    </pre>
     </div>
     <script src="js/halozat.js"></script>
 </body>
