@@ -25,10 +25,10 @@
       </ul>
   </nav> 
 <body>
-    <div class="halozat-image">
+    <div class="halozat-image"></div>
         <div class="br"></div>
     <div class="col-sm-8 center-div">
-        <h2 class="form">Hálózatszámítás</h1>
+        <h2 class="form">Hálózatszámítás</h2>
         <form class="form-horizontal">
             <div class="form-group row">
                 <label class="col-form-label col-sm-3" for="network">IP cím</label>
@@ -101,6 +101,14 @@
                 </div>
             </div>
         </form>
+    </div>
+    <div class="borderDescription coloring">
+        <h1 class="coloring">Magyarázat</h1>
+        <p>Ez a számoló egyelőre <b>CSAK</b> "C" osztályú ip címekkel működik.</p>
+        <p>Vegyünk példának egy alap hálózatot /24-es prefixel.<br>
+            Az első 24 bit azaz az első 3 octet a hálózatazonosító, ezt SOSEM tudjuk megváltoztatni.<br>
+            
+        </p>
     </div>
     <script src="js/halozat.js"></script>
 </body>
