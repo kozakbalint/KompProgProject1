@@ -46,7 +46,8 @@ h1, h3
     background-size: auto;
     background-attachment: fixed;
     margin: 8%;
-    
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
 } 
 .bg-text
 {
@@ -155,4 +156,20 @@ a :hover
     padding: 20px;
     text-align: center;
     position: sticky;
+}
+
+.prog-footer
+{
+    font-size: large;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+p{
+    color: black;
+}
+
+nav
+{
+    font-weight: bold;
 }
